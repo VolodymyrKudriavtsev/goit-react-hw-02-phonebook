@@ -18,7 +18,8 @@ class App extends Component {
     };
 
     for (const contact of this.state.contacts) {
-      if (name === contact.name) return alert(`${name} is alrady in contacts.`);
+      if (name === contact.name)
+        return alert(`${name} is already in contacts.`);
     }
 
     this.setState(({ contacts }) => ({
