@@ -22,7 +22,6 @@ const ContactForm = ({ onAddContact }) => {
           required
         />
       </label>
-      <br />
       <label>
         Number
         <input
@@ -33,7 +32,6 @@ const ContactForm = ({ onAddContact }) => {
           required
         />
       </label>
-      <br />
       <button type="submit">Add contact</button>
     </Form>
   );
