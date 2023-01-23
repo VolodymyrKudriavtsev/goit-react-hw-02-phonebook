@@ -1,9 +1,12 @@
 import { Component } from 'react';
-import { Container } from './App.styled';
+import shortid from 'shortid';
+
 import ContactList from 'components/ContactList';
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
-import shortid from 'shortid';
+
+import { Container } from './App.styled';
+
 class App extends Component {
   state = {
     contacts: [],
@@ -18,7 +21,7 @@ class App extends Component {
     };
 
     for (const contact of this.state.contacts) {
-      if (name === contact.name)
+      if (name.toLowerCase() === contact.name.toLowerCase())
         return alert(`${name} is already in contacts.`);
     }
 
