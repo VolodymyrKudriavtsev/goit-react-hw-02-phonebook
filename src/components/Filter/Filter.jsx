@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Filtration } from './Filter.styled';
 
 const Filter = ({ value, onchandgeFilter }) => {
@@ -14,6 +15,11 @@ const Filter = ({ value, onchandgeFilter }) => {
       </label>
     </Filtration>
   );
+};
+
+Filter.propTypes = {
+  onchandgeFilter: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default Filter;
